@@ -9,7 +9,13 @@ public class Calc {
 
     public static int run1(String exp){
         int reslut=0;
-
+        if (exp.contains("-")){
+            String[]list=exp.split("-");
+            reslut= Integer.parseInt(list[0])-Integer.parseInt(list[1]);
+        }else if (exp.contains("+")){
+            String[]list =exp.split("\\+");
+            reslut= Integer.parseInt(list[0])+Integer.parseInt(list[1]);
+        }
         return reslut;
     }
 
