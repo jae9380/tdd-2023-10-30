@@ -24,4 +24,17 @@ public class CalcTest {
         int answer= Calc.run1("10*3");
         assertThat(answer).isEqualTo(30);
     }
+
+    @Test
+    @DisplayName("10+(10-10)")
+    void r2t1(){
+        int answer=Calc.run2("10+(10-10)");
+
+    }
+//    @Test
+//    @DisplayName("3 * 1 + (1 - (4 * 1 - (1 - 1)))")
+//    void t4(){
+//        int answer = Calc.run2("3 * 1 + (1 - (4 * 1 - (1 - 1)))");
+//        assertThat(answer).isEqualTo(0);
+//    }
 }
