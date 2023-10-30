@@ -12,8 +12,16 @@ public class CalcTest {
         int answer = Calc.run1("10+10");
         assertThat(answer).isEqualTo(20);
     }
+    @Test
+    @DisplayName("10-10=0")
     void t2(){
         int answer = Calc.run1("10-10");
         assertThat(answer).isEqualTo(0);
+    }
+    @Test
+    @DisplayName("10*3=30")
+    void t3(){
+        int answer= Calc.run1("10*3");
+        assertThat(answer).isEqualTo(30);
     }
 }
