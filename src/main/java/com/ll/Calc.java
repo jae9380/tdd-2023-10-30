@@ -8,14 +8,30 @@ import java.util.regex.Pattern;
 public class Calc {
 
     public static int run1(String exp){
-        int reslut=0;
-        if (exp.contains("-")){
-            String[]list=exp.split("-");
-            reslut= Integer.parseInt(list[0])-Integer.parseInt(list[1]);
-        }else if (exp.contains("+")){
-            String[]list =exp.split("\\+");
-            reslut= Integer.parseInt(list[0])+Integer.parseInt(list[1]);
+        int reslut=0,a=0,b=0;
+
+        if (exp.contains("+")){
+            String[]list = exp.split("\\+");
+            a =Integer.parseInt(list[0]);
+            b=Integer.parseInt(list[1]);
+            reslut=a+b;
+        }else if (exp.contains("-")){
+            String[]list = exp.split("\\-");
+            a =Integer.parseInt(list[0]);
+            b=Integer.parseInt(list[1]);
+            reslut=a-b;
+        }else if (exp.contains("*")){
+            String[]list = exp.split("\\*");
+            a =Integer.parseInt(list[0]);
+            b=Integer.parseInt(list[1]);
+            reslut=a*b;
+        } else if (exp.contains("/")) {
+            String[]list = exp.split("\\/");
+            a =Integer.parseInt(list[0]);
+            b=Integer.parseInt(list[1]);
+            reslut=a/b;
         }
+
         return reslut;
     }
 

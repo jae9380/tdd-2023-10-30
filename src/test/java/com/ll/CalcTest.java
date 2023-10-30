@@ -7,7 +7,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class CalcTest {
     @Test
-    @DisplayName("Calc에 runMethod는 int를 return 한다")
+    @DisplayName("10+10=20")
     void t1(){
         int answer = Calc.run1("10+10");
         assertThat(answer).isEqualTo(20);
